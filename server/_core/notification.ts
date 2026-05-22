@@ -12,7 +12,7 @@ export type NotificationPayload = {
   content: string;
 };
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'fdarko93@gmail.com';
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@example.com';
 
 /**
  * Sends a notification email to the project owner (admin).

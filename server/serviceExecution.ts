@@ -1647,7 +1647,7 @@ async function executeReviewStrategy(order: any, client: any): Promise<boolean> 
 // DOMINATOR-ONLY STEPS (9-16)
 // ============================================================================
 
-// TODO [May 2026]: Switch to OAuth flow once GBP API access is approved (60-day wait from March 2026).
+// Future: switch to OAuth flow once GBP API access is approved.
 // When ready:
 // 1. Add OAuth consent screen button to ClientPortal.tsx
 // 2. Store refresh tokens in client_credentials
@@ -1962,7 +1962,7 @@ async function executeGBPOptimization(order: any, client: any, context?: Session
     const deliverable = context?.deliverables.find(d => d.deliverableType === 'gbp_optimization');
     if (deliverable?.status === 'approved') {
       // ── Phase 3 (Future): Implement via Playwright / GBP API ──
-      // TODO: When GBP API access is approved, use it to push content directly.
+      // Future: when GBP API access is approved, push content directly.
       // For now, mark as completed with the generated content PDF.
       await completeDeliverable({
         orderId: order.id,

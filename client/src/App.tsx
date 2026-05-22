@@ -7,7 +7,6 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
 import { theme } from "./theme";
 import HomeNew from "./pages/HomeNew";
-import PortalMockup from "./pages/PortalMockup";
 import PortalV2 from "./pages/PortalV2";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
@@ -41,7 +40,6 @@ function Router() {
       <Route path={"/portal"} component={PortalV2} />
       <Route path={"/portal/select-account"} component={SelectAccount} />
       <Route path={"/portal-legacy"} component={ClientPortal} />
-      <Route path={"/portal-mockup"} component={PortalMockup} />
       <Route path={"/start"} component={FunnelStart} />
       <Route path={"/scan"} component={Scan} />
       <Route path={"/support"} component={Support} />

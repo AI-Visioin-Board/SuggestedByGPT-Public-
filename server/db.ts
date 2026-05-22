@@ -145,4 +145,4 @@ export async function updateUserOpenId(userId: number, newOpenId: string) {
   await db.update(users).set({ openId: newOpenId }).where(eq(users.id, userId));
 }
 
-// TODO: add feature queries here as your schema grows.
+// Additional feature queries are added here as the schema grows.

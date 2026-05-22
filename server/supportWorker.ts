@@ -32,7 +32,7 @@ const PORTAL_URL = process.env.PORTAL_URL || 'https://suggestedbygpt.com/portal'
 const SUPPORT_URL = process.env.PORTAL_URL
   ? process.env.PORTAL_URL.replace('/portal', '/support')
   : 'https://suggestedbygpt.com/support';
-const ADMIN_EMAIL = 'fdarko93@gmail.com';
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@example.com';
 
 // Keywords that trigger auto-escalation
 const ESCALATION_KEYWORDS = [

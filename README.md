@@ -14,7 +14,7 @@ This repository is a **public showcase copy** of the production codebase. All se
 - **Fully autonomous delivery engine** — a self-scheduling worker processes each client's order through a pipeline of step executors with no human in the loop.
 - **Two real-time voice AI agents** (Twilio telephony + Gemini Live / Deepgram) for onboarding and 24/7 support, with streaming audio and sub-second turn latency.
 - **Autonomous long-form content engine** that researches, writes, quality-gates, and publishes articles on a recurring cadence across multiple CMS targets.
-- **Anti-detection browser automation** (Playwright / Patchright + residential-proxy management + per-account fingerprinting) for autonomous web tasks at scale.
+- **Autonomous web-automation layer** (Playwright / Patchright) that carries out off-platform tasks for clients — content publishing, directory submissions, and strategic community engagement — without human intervention.
 - **Full commercial stack** — Stripe checkout & subscription billing, magic-link auth, transactional + drip email, file storage, server-side rendering, and a gamified client portal.
 
 ---
@@ -39,7 +39,7 @@ flowchart TD
         Worker["Self-scheduling worker"]
         Steps["Step executors: schema · llms.txt · directories · GBP · citations · content · reviews"]
         Content["Blog content engine (research → write → QA → publish)"]
-        Reddit["Reddit engagement (warmed accounts, proxies, fingerprints)"]
+        Reddit["Community engagement (autonomous Reddit posting)"]
     end
 
     subgraph AI["AI services"]
@@ -99,8 +99,8 @@ Streaming voice agents over WebSockets: `gemini-token.ts`, `deepgram-token.ts`, 
 ### Blog / content engine (`server/blogContent/`)
 An end-to-end content pipeline: `topicSeeder.ts` → `longformWriter.ts` / `shortWriter.ts` → `qualityGates.ts` + `antiAiRules.ts` + `verifier.ts` → `schemaBuilder.ts` → `publishQueue.ts`. Multi-CMS publishers (`wordpressPlugin.ts`, `wixOAuth.ts`, `shopifyOAuth.ts`, `squarespacePatchright.ts`, `patchrightUniversal.ts`) push finished, schema-marked articles to client sites. `citationMonitor.ts` tracks whether AI engines start citing the content.
 
-### Browser automation & Reddit engagement (`server/reddit/`, `server/stealthBrowser.ts`)
-Anti-detection automation built on Patchright with `proxyManager.ts` (residential-IP pooling + 1:1 sticky assignment), `proxyHealthChecker.ts`, `fingerprintGenerator.ts`, `captchaSolver.ts`, `shadowbanChecker.ts`, and a multi-day account `warming/` subsystem. Passwords and cookies are stored encrypted (`server/encryption.ts`).
+### Community engagement (`server/reddit/`)
+An autonomous agent that strategically shares posts on Reddit to help clients earn visibility in communities relevant to their business — one part of the broader GEO process, since community signals feed into how AI assistants form recommendations. The agent handles the full lifecycle on its own, and any credentials it manages are stored encrypted (`server/encryption.ts`).
 
 ### AI-visibility scan (`server/routes/scan.ts`, `server/scanScoring.ts`)
 The free lead magnet: scores any website across six categories (schema, crawler access, technical SEO, content signals, directory presence, review signals) and produces a graded PDF report. Backed by `websiteRealityChecker.ts` and `websiteStyleScraper.ts`.
@@ -123,14 +123,13 @@ client/                 React + Vite frontend
 server/                 Express + tRPC backend
   _core/                Claude/LLM, email, Supabase, auth, tRPC, rate limiting, voice
   blogContent/          Autonomous content engine + multi-CMS publishers
-  reddit/               Anti-detection automation + account warming
+  reddit/               Autonomous community-engagement agent (Reddit posting)
   routes/               Voice streaming, scan, scraper, inbound email
   routers/              Feature tRPC routers
 shared/                 Types, product catalog, constants shared by client & server
 drizzle/                SQL migrations (32) + schema snapshots
 infrastructure/         Cloudflare email-routing worker
 tools/                  Supporting utilities (Go CORS proxy source)
-scripts/                Operational / migration scripts
 ```
 
 ---

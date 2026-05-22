@@ -30,7 +30,7 @@ export const ENV = {
   portalUrl: (process.env.PORTAL_URL ?? "https://suggestedbygpt.com/portal").trim(),
 
   // Admin
-  adminEmail: (process.env.ADMIN_EMAIL ?? "fdarko93@gmail.com").trim(),
+  adminEmail: (process.env.ADMIN_EMAIL ?? "admin@example.com").trim(),
 
   // Collaborator.pro (Guest Post API)
   collaboratorApiKey: (process.env.COLLABORATOR_API_KEY ?? "").trim(),

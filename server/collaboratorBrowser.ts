@@ -21,8 +21,7 @@
  *   - Checkout / payment confirmation page
  *   - Post-moderation status strings (only saw "Moderation" — approved/rejected
  *     strings still unverified)
- * These are flagged with explicit TODO comments. First production runs will
- * surface the real selectors and we tighten them.
+ * First production runs surface the real selectors so they can be tightened.
  *
  * Required env:
  *   ADSPOWER_API_BASE      — default http://127.0.0.1:20725
@@ -452,8 +451,8 @@ export class CollaboratorBrowser {
           domain: (a.textContent || '').trim().split(/\s/)[0] || '',
           dr: drMatch ? Number(drMatch[1]) : undefined,
           priceUsd: priceMatch ? Number(priceMatch[1].replace(/,/g, '')) : undefined,
-          category: undefined, // TODO: parse category column
-          traffic: undefined,  // TODO: parse traffic with K/M suffix
+          category: undefined, // parse category column when selectors confirmed
+          traffic: undefined,  // parse traffic (K/M suffix) when selectors confirmed
         });
       }
       return out;
@@ -501,7 +500,7 @@ export class CollaboratorBrowser {
   }
 
   // ──────────────────────────────────────────────────────────────
-  // Checkout (TODO — selectors unverified)
+  // Checkout (selectors best-effort until first live run)
   // ──────────────────────────────────────────────────────────────
 
   /**
@@ -509,10 +508,9 @@ export class CollaboratorBrowser {
    * each cart item (Collaborator allows you to assign the same article to
    * multiple publishers if you have credits).
    *
-   * TODO 2026-05-05: I haven't actually walked the cart-with-item UI or the
-   * payment confirmation page, so the selectors below are best-effort guesses.
-   * First production run will surface the real selectors and we tighten them.
-   * Keep this in dry-run mode (set `commit: false`) until verified.
+   * The cart-with-item UI and payment confirmation page selectors are
+   * best-effort until validated against a live run; keep this in dry-run mode
+   * (set `commit: false`) until verified.
    */
   async checkoutCart(options: {
     /** Map of publisherId → postId for assigning articles to deals */

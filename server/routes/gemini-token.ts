@@ -11,7 +11,7 @@
  * Cloud credentials, not AI Studio API keys. We pass the API key directly
  * instead, relying on rate limiting to prevent abuse.
  *
- * TODO: Migrate to Vertex AI credentials to restore ephemeral token support
+ * Future: migrate to Vertex AI credentials to restore ephemeral token support
  * and avoid exposing the raw API key to clients.
  */
 
