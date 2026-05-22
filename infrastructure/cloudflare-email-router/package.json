@@ -1,0 +1,19 @@
+{
+  "name": "sbgpt-reddit-email-router",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "tail": "wrangler tail",
+    "secret:set-hmac": "wrangler secret put INTERNAL_WEBHOOK_SECRET"
+  },
+  "dependencies": {
+    "postal-mime": "^2.4.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260424.0",
+    "wrangler": "^4.0.0"
+  }
+}

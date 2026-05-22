@@ -1,0 +1,111 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1771808936967,
+      "tag": "0000_little_pete_wisdom",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1771819880117,
+      "tag": "0001_premium_zombie",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1771821610788,
+      "tag": "0002_condemned_steel_serpent",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1771829445053,
+      "tag": "0003_aromatic_blob",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1771971429028,
+      "tag": "0004_special_venus",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1771972399987,
+      "tag": "0005_cold_tomorrow_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1771995614221,
+      "tag": "0006_mute_spot",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1772088093624,
+      "tag": "0007_tiny_mindworm",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1772180156328,
+      "tag": "0008_silent_captain_cross",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1772205527101,
+      "tag": "0009_jittery_odin",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1772421054542,
+      "tag": "0010_melted_ego",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1772432604626,
+      "tag": "0011_solid_sister_grimm",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1772485057329,
+      "tag": "0012_steep_nightshade",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1773748170032,
+      "tag": "0013_odd_sally_floyd",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "5",
+      "when": 1775674381104,
+      "tag": "0014_noisy_norman_osborn",
+      "breakpoints": true
+    }
+  ]
+}

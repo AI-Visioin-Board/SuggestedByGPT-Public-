@@ -1,0 +1,36 @@
+# Cloudflare Worker — Reddit verification email parser
+#
+# Receives emails forwarded by Cloudflare Email Routing on the inbox
+# domain (set DOMAIN at deploy time), extracts the 6-digit verification
+# code or magic link from Reddit's signup confirmation message, and
+# POSTs it to the Railway worker's /internal/reddit-verify endpoint.
+
+name = "sbgpt-reddit-email-router"
+main = "src/worker.ts"
+compatibility_date = "2026-04-25"
+
+# Email Workers are dispatched by Email Routing rules, not via HTTP routes.
+# No workers.dev URL needed.
+workers_dev = false
+
+# Workers Logs — required for debugging. Without this, console.log/error
+# from the email handler is invisible in the dashboard. Enabled 2026-04-25
+# while diagnosing why CF reported 3 emails received but 0 forwarded.
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
+
+[vars]
+# Public Railway endpoint that receives all inbound emails.
+# Renamed 2026-04-26 from /reddit-verify → /inbound-email (generalized).
+# Override with `wrangler secret put` for the HMAC + domain.
+RAILWAY_ENDPOINT = "https://suggestedbygpt-production.up.railway.app/api/internal/inbound-email"
+
+# Set via `wrangler secret put`:
+# - INTERNAL_WEBHOOK_SECRET (HMAC for verifying message authenticity Railway-side)
+
+# Email Routing trigger — set after domain is registered + Email Routing enabled
+# [[email]]
+# destination_address = "info@suggestedbygpt.com"  # for forwarding fallback
+# destination_email = "info@suggestedbygpt.com"

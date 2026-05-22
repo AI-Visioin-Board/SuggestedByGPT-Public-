@@ -1,0 +1,44 @@
+# SuggestedByGPT Robots.txt
+# AI-friendly: we WANT AI crawlers to index our content
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /portal
+Disallow: /assistant
+
+# AI Crawler Access
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Content Signals (C2PA / robots.txt content signals standard)
+# As a condition of accessing this website, you agree to abide by the following
+# content signals:
+# search: yes
+# ai-input: yes
+# ai-train: yes
+
+# Sitemap
+Sitemap: https://suggestedbygpt.com/sitemap.xml
+
+# LLMs.txt
+# See https://suggestedbygpt.com/llms.txt for AI-readable business summary

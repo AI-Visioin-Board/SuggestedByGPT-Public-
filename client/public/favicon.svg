@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <g fill="#D97B6A">
+    <!-- Big sparkle, left -->
+    <g transform="translate(24 32)">
+      <path d="M 0,-22 Q 0,0 22,0 Q 0,0 0,22 Q 0,0 -22,0 Q 0,0 0,-22 Z"/>
+    </g>
+    <!-- Small sparkle, top right -->
+    <g transform="translate(52 14)">
+      <path d="M 0,-8 Q 0,0 8,0 Q 0,0 0,8 Q 0,0 -8,0 Q 0,0 0,-8 Z"/>
+    </g>
+    <!-- Small sparkle, bottom right -->
+    <g transform="translate(52 46)">
+      <path d="M 0,-6 Q 0,0 6,0 Q 0,0 0,6 Q 0,0 -6,0 Q 0,0 0,-6 Z"/>
+    </g>
+  </g>
+</svg>

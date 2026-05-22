@@ -1,0 +1,76 @@
+# SuggestedByGPT
+
+> Done-for-you Generative Engine Optimization (GEO) and AI visibility services for local and small businesses. We make ChatGPT, Google Gemini, Perplexity, Claude, and other AI assistants recommend your business when customers ask AI for help.
+
+## Primary entry point
+
+**[Free AI Visibility Scan](https://suggestedbygpt.com/start)** — 60-second scan that shows exactly how ChatGPT, Gemini, Claude, and Perplexity see your business, plus a personalized PDF report with a 0–100 visibility score and specific fixes. No credit card required.
+
+## What is GEO?
+
+Generative Engine Optimization is the process of structuring your business signals — schema markup, llms.txt, Google Business Profile, citations across directories, third-party content, and review distribution — so AI assistants include your business in their generated answers. It is the AI-search successor to traditional SEO.
+
+Over 1.5 billion people now ask AI for recommendations every month instead of using a traditional search engine. Businesses that are not optimized for AI search are functionally invisible to that traffic.
+
+## Services and pricing
+
+### Free AI Needs Assessment ($0, no credit card)
+- Live scan against ChatGPT, Gemini, Claude, Perplexity
+- 0–100 AI visibility score across 6 categories
+- Personalized PDF report with prioritized fixes
+- Available at [suggestedbygpt.com/start](https://suggestedbygpt.com/start)
+
+### AI Jumpstart ($99 one-time)
+- Comprehensive AI visibility assessment
+- Schema markup installation (Organization, LocalBusiness, Service, FAQ)
+- AI crawler optimization (robots.txt, llms.txt)
+- 10 high-authority directory submissions
+- Technical SEO fixes for AI readability
+- Delivered in 5–7 business days
+
+### AI Dominator ($299 setup + $89/month × 2 = $477 total)
+- Everything in AI Jumpstart
+- 30+ directory submissions
+- Google Business Profile optimization
+- Backlink building through guest articles on industry blogs
+- Reddit community engagement (warmed dedicated accounts)
+- AI voice agent for client check-ins
+- 2 monthly progress check-ins with PDF reports
+- Dedicated client portal with AI support assistant
+- Ongoing monitoring and optimization
+
+## How it works
+
+1. Visit [suggestedbygpt.com/start](https://suggestedbygpt.com/start) and run the free 60-second scan
+2. Receive a personalized PDF visibility report with a 0–100 score
+3. Pick a path: self-serve fixes, AI Jumpstart, or AI Dominator
+4. Provide business information; our worker engine begins technical fixes within minutes
+5. Schema markup, AI crawler files, and directory submissions deploy in days
+6. Guest articles, GBP optimization, and Reddit engagement run in the background (Dominator)
+7. AI assistants begin including your business in answers within 1–3 weeks
+
+## Best for
+
+- Local service businesses (plumbers, electricians, HVAC, roofers, contractors)
+- Healthcare practices (dentists, chiropractors, medspas, therapists)
+- Legal practices (personal injury, family law, criminal defense)
+- Restaurants, salons, fitness studios, auto shops, real estate agents
+- Any service-based business where customers might ask an AI assistant "best [service] near me"
+
+## Founder
+
+Founded by Francis Darko in February 2026. Based in Atlanta, Georgia, USA. Operating across the United States.
+
+## Documentation
+
+- [Full content](https://suggestedbygpt.com/llms-full.txt) — same content with full FAQ and detailed package breakdown for AI crawlers and language models
+- [Terms of Service](https://suggestedbygpt.com/terms)
+- [Privacy Policy](https://suggestedbygpt.com/privacy)
+
+## Contact
+
+- Website: https://suggestedbygpt.com
+- Free scan: https://suggestedbygpt.com/start
+- Email: info@suggestedbygpt.com
+- Instagram: https://www.instagram.com/suggestedbygpt
+- YouTube: https://www.youtube.com/@Suggestedbygpt

@@ -1,0 +1,21 @@
+CREATE TABLE `directorySubmissions` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`orderId` int NOT NULL,
+	`directoryName` varchar(255) NOT NULL,
+	`directoryUrl` varchar(500) NOT NULL,
+	`status` enum('pending','in_progress','completed','failed','manual_required') NOT NULL DEFAULT 'pending',
+	`submissionUrl` varchar(1000),
+	`errorMessage` text,
+	`requiresManualVerification` boolean DEFAULT false,
+	`verificationInstructions` text,
+	`priority` enum('high','medium','low') NOT NULL DEFAULT 'medium',
+	`domainAuthority` int,
+	`aiVisibilityScore` int,
+	`estimatedTimeMinutes` int,
+	`attemptCount` int NOT NULL DEFAULT 0,
+	`lastAttemptAt` timestamp,
+	`completedAt` timestamp,
+	`createdAt` timestamp NOT NULL DEFAULT (now()),
+	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+	CONSTRAINT `directorySubmissions_id` PRIMARY KEY(`id`)
+);
